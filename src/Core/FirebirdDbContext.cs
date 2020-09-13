@@ -77,11 +77,7 @@ namespace web_app.Core
 		}
 		public void VoidQuery(string sql)
         {
-			var result = new List<Dictionary<string, string>>();
-			var columnList = new List<string>();
-
 			this._connection.Open();
-
 			var transaction = this._connection.BeginTransaction();
 			var command = new FbCommand(sql, this._connection, transaction);
 			command.ExecuteReader();
