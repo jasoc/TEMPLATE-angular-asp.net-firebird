@@ -10,9 +10,7 @@ namespace web_app.Core
 
 		public FirebirdDbContext(string ConnectionString)
 		{
-			//this._connectionString = "User=SYSDBA;Password=pwd123//;Database=test;DataSource=gboxp-pc;";
 			this._ConnectionString = ConnectionString;
-
 			this._connection = new FbConnection(_ConnectionString);
 		}
 
